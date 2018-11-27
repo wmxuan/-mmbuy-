@@ -1,0 +1,47 @@
+// 把html根元素的字体大小设置为100px
+html {
+    font-size: 100px;
+}
+
+// 把body的字体设置为14px
+body {
+    font-size: .14rem;
+}
+
+// 定义乐淘的主题色
+@mainColor : #ff4e49;
+// /* 样式初始化文件 */
+* {
+    margin: 0px;
+    padding: 0px;
+    /* 移动端一般会设置盒模型为border-box 防止边框和padding撑大盒子超出屏幕宽度出现滚动条 */
+    box-sizing: border-box;
+    /*移动端a标签按住的高亮背景色 设置透明即可*/
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+li {
+    list-style: none;
+}
+
+input {
+    /* 去除输入框的内外边框 */
+    border: 0;
+    outline: 0;
+}
+
+img {
+    // 去掉图片的边框
+    border: none; // 去掉图片底部的3px的间距
+    vertical-align: middle;
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+html,
+body {
+    height: 100%; // overflow: hidden;
+}
