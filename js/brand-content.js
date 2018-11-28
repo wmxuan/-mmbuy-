@@ -3,7 +3,7 @@ $(function () {
   m.tab('.tab-wrap', '.content').tpl({
     url: 'api/getbrand',
     data: {
-      brandtitleid: 0
+      brandtitleid: m.config.param.split('=')[1]
     },
     tpl: 'brandTop10tpl',
     location: '#brandTop'
@@ -11,7 +11,7 @@ $(function () {
   }).tpl({
     url: 'api/getbrandproductlist',
     data: {
-      brandtitleid: 0
+      brandtitleid: m.config.param.split('=')[1]
     },
     tpl: 'salesTop10tpl',
     location: '#salesTop'
@@ -19,13 +19,13 @@ $(function () {
   }).tpl({
     url: 'api/getproductcom',
     data: {
-      productid: 1
+      productid: m.config.param.split('=')[1]
     },
     tpl: 'pingLunTpl',
     location: '#pingLun'
 
   })
-
+  console.log()
 })
 
 function MMBBrand() {
@@ -35,8 +35,11 @@ function MMBBrand() {
 MMBBrand.prototype = {
   constructor: MMBBrand,
   config: {
-    urlHead: 'http://localhost:9090/'
+    urlHead: 'http://localhost:9090/',
+    param: location.search
+
   },
+
   tab: function (tabhead, tabcontent) {
     $(tabhead).find('[data-title]').on('click', function (e) {
       $(this).addClass('mui-active').siblings().removeClass('mui-active');
