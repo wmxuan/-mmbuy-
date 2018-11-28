@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 1.MUI-css文件  -->
+    <link rel="stylesheet" href="lib/mui/css/mui.min.css">
+    <!-- 2.字体图库css -->
+    <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.css">
+    <!-- 3.本页less -->
+    <link rel="stylesheet/less" href="less/couponproduct.less">
+    <!-- 4.less-js文件  -->
+    <script src="lib/less/less.js"></script>
+    <!-- 5.rem-js文件夹 -->
+    <script src="js/rem.js"></script>
+
+</head>
+
+<body>
+    <!-- 头部区域 -->
+    <header id="header">
+        <a href="coupon.html" class="fa fa-angle-left left"></a>
+        <h1>优惠详情</h1>
+        <!-- <a href="javascript:;" class="logo"><img src="./images/header_logo.png" alt=""></a> -->
+        <a href="#" class="fa fa-download right"></a>
+    </header>
+
+    <!-- 轮播图 -->
+    <section id="slide" class="mui-backdrop">
+        <i class="fa fa-times-circle close"></i>
+        <div class="mui-slider ">
+            <div class="mui-slider-group mui-slider-loop">
+                <!--支持循环，需要重复图片节点-->
+                <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="http://d3.5ikfc.com/static/thumbs/1016/kfc-5ikfc-108_pc28.jpg" /></a></div>
+                <div class="mui-slider-item"><a href="#"><img src="http://d3.5ikfc.com/static/thumbs/1016/kfc-5ikfc-108_pc15.jpg" /></a></div>
+                <div class="mui-slider-item"><a href="#"><img src="http://d3.5ikfc.com/static/thumbs/1016/kfc-5ikfc-108_pc22.jpg" /></a></div>
+                <div class="mui-slider-item"><a href="#"><img src="http://d3.5ikfc.com/static/thumbs/1016/kfc-5ikfc-108_pc14.jpg" /></a></div>
+                <div class="mui-slider-item"><a href="#"><img src="http://d3.5ikfc.com/static/thumbs/1016/kfc-5ikfc-108_pc27.jpg" /></a></div>
+                <!--支持循环，需要重复图片节点-->
+                <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="http://d3.5ikfc.com/static/thumbs/1016/kfc-5ikfc-108_pc28.jpg" /></a></div>
+            </div>
+        </div>
+    </section>
+    <!-- 主体 -->
+    <main id="main">
+        <!-- 1. 添加下拉刷新的父容器 -->
+        <div class="mui-scroll-wrapper">
+            <!-- 添加下拉刷新的子容器 -->
+            <div class="mui-scroll">
+                <div class="discount-public">
+                    <p>--点餐前出示手机中的优惠券,即可享受优惠--</p>
+                </div>
+                <ul class="mui-table-view product-list  ">
+                    <li class="mui-table-view-cell mui-media liList  ">
+                        <a href="javascript:;" class="mui-slider-handle   ">
+                            <!-- 媒体列表的左边  -->
+                            <div class="mui-pull-left product-left">
+                                <img src="http://d3.5ikfc.com/static/thumbs/1016/kfc-5ikfc-108_pc27.jpg" alt=" 两人小食组 新奥尔良烤翅2块+薯条(中)+黄金鸡块5块+劲爆鸡米花(小) 2016年10月凭肯德基优惠券">
+                            </div>
+
+                            <div class="mui-media-body product-right mui-navigate-right ">
+
+                                <p class="product-name   ">C27 两人小食组 新奥尔良烤翅2块+薯条(中)+黄金鸡块5块+劲爆鸡米花(小) 2016年10月凭肯德基优惠券</p>
+                                <p class="product-price">¥ 28</p>
+                                <p class="product-time "> 有效期至10月31日</p>
+
+                            </div>
+                        </a>
+                    </li>
+                    <li class="mui-table-view-cell mui-media   " id="liList">
+                        <a href="javascript:;" class="mui-slider-handle   ">
+                            <!-- 媒体列表的左边  -->
+                            <div class="mui-pull-left product-left">
+                                <img src="http://d3.5ikfc.com/static/thumbs/1016/kfc-5ikfc-108_pc27.jpg" alt=" 两人小食组 新奥尔良烤翅2块+薯条(中)+黄金鸡块5块+劲爆鸡米花(小) 2016年10月凭肯德基优惠券">
+                            </div>
+
+                            <div class="mui-media-body product-right mui-navigate-right ">
+
+                                <p class="product-name   ">C27 两人小食组 新奥尔良烤翅2块+薯条(中)+黄金鸡块5块+劲爆鸡米花(小) 2016年10月凭肯德基优惠券</p>
+                                <p class="product-price">¥ 28</p>
+                                <p class="product-time "> 有效期至10月31日</p>
+
+                            </div>
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+
+    </main>
+    <!-- 导航条 -->
+    <section id="nav">
+        <div class="discount-footer">
+            <a href="index.html">首页</a>
+            >
+            <a href="coupon.html">优惠券</a>
+            >
+        </div>
+    </section>
+    <!-- 返回顶部 -->
+    <!-- <div class="fa fa-arrow-up rtt " id="rtt"></div> -->
+    <!-- 底部区域 -->
+    <footer id="footer">
+        <div class="top">
+            <a href="login.html">登录</a>
+            <a href="register.html">注册</a>
+            <a href="javascript:;" class=" goTop"><i class="fa fa-arrow-up"></i>返回顶部</a>
+        </div>
+        <div class="bottom">
+            <p class="content"><span>手机APP下载</span>慢慢买手机版--掌上比价平台</p>
+            <p class="url">m.manmanbuy.com</p>
+        </div>
+    </footer>
+    <!-- 商品列表渲染 -->
+    <script id="goodsListTpl" type="text/html">
+        {{ each result value }}
+        <li class="mui-table-view-cell mui-media liList   " >
+            <a href="javascript:;" class="mui-slider-handle   ">
+                <!-- 媒体列表的左边  -->
+                <div class="mui-pull-left product-left">
+                   {{@value.couponProductImg}}
+                </div>
+
+                <div class="mui-media-body product-right mui-navigate-right ">
+                   
+                    <p class="product-name   ">{{ value.couponProductName }}</p>
+                    <p class="product-price">{{ value.couponProductPrice }}</p>
+                    <p class="product-time "> {{ value.couponProductTime }}</p>
+
+                </div>
+            </a>
+        </li>
+        {{ /each }}
+    </script>
+</body>
+<!-- MUI-js文件 -->
+<script src="lib/mui/js/mui.js"></script>
+<!-- 模板引擎 -->
+<script src="lib/artTemplate/template-web.js"></script>
+<!-- zepoto js文件 -->
+<script src="lib/zepto/zepto.min.js"></script>
+<!-- 本页的js文件 -->
+<script src="js/couponproduct.js"></script>
+
+</html>

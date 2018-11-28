@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>慢慢买</title>
+    <link rel="stylesheet" href="lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.css">
+    <link rel="stylesheet/less" href="less/index.less">
+    <link rel="stylesheet" href="less/animate.css">
+    <script src="lib/less/less.js"></script>
+
+</head>
+
+<body>
+    <!-- 头部区域 -->
+    <header id="header">
+        <a href="index.html" class="fa fa-angle-left left"></a>
+        <h1>慢慢买</h1>
+        <!-- <a href="javascript:;" class="logo"><img src="./images/header_logo.png" alt=""></a> -->
+        <a href="#" class="fa fa-download right"></a>
+    </header>
+
+
+
+
+    <main id="main">
+        <!-- 区域滚动的父容器 高度是固定的-->
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <!-- 区域滚动的子容器 高度是由内容撑开的 -->
+                <div class="mui-slider">
+                    <!-- 轮播图 -->
+                    <div class="mui-slider-group mui-slider-loop">
+                        <!--支持循环，需要重复图片节点-->
+                        <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="./images/banner04.jpg" /></a></div>
+                        <div class="mui-slider-item"><a href="#"><img src="./images/banner01.jpg" /></a></div>
+                        <div class="mui-slider-item"><a href="#"><img src="./images/banner02.jpg" /></a></div>
+                        <div class="mui-slider-item"><a href="#"><img src="./images/banner03.jpg" /></a></div>
+                        <div class="mui-slider-item"><a href="#"><img src="./images/banner04.jpg" /></a></div>
+                        <!--支持循环，需要重复图片节点-->
+                        <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="./images/banner01.jpg" /></a></div>
+                    </div>
+                    <!-- 小圆点 -->
+                    <div class="mui-slider-indicator">
+                        <div class="mui-indicator mui-active"></div>
+                        <div class="mui-indicator"></div>
+                        <div class="mui-indicator"></div>
+                        <div class="mui-indicator"></div>
+                    </div>
+                </div>
+
+
+                <!-- 导航栏区域 -->
+                <nav id="menu">
+
+                </nav>
+
+                <!-- 超值折扣推荐 -->
+                <section class="list-title">
+                    <div class="list-title-content">
+                        <span>超值折扣推荐</span>
+                        <img src="images/more.png" width="20" height="20">
+                    </div>
+                </section>
+
+                <!-- 折扣内容 -->
+                <section class="productList">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <div class="left-content">
+                                    <img src="http://wnzk-img.zuyushop.com/r_img/img/20181029/16/4ea84814d68341d2a9bf39105d3cec26.jpg"
+                                        alt="">
+                                </div>
+                                <div class="right-content">
+                                    <p class="product-name">
+                                        双11预售：鸿星尔克 男童棉马甲
+                                        <span>89元包邮 （付20元定金立减40元）</span>
+                                    </p>
+                                    <div class="product-from">
+                                        天猫商城 | 10-29 17:04
+                                        <i class="icon-common"></i>
+                                        <span>0</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- 更多优惠栏 -->
+                    <div class="more-bar">
+                        <a href="moneyctrl.html">更多优惠信息<i class="fa fa-angle-double-right"></i></a>
+                    </div>
+                </section>
+
+
+
+                <!-- 品牌排行 -->
+                <section class="list-title">
+                    <div class="list-title-content">
+                        <span>品牌排行</span>
+                        <img src="images/more.png" alt="" width="20" height="20">
+                    </div>
+                </section>
+                <!-- 底部区域 -->
+                <footer id="footer">
+                    <div class="top">
+                        <a href="login.html">登录</a>
+                        <a href="register.html">注册</a>
+                        <a href="javascript:;" id="toto"><i class="fa fa-arrow-up"></i>返回顶部</a>
+                    </div>
+                    <div class="bottom">
+                        <p class="content"><span>手机APP下载</span>慢慢买手机版--掌上比价平台</p>
+                        <p class="url">m.manmanbuy.com</p>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </main>
+
+
+
+
+    <!-- 导航栏模板 -->
+    <script id="menuTpl" type="text/html">
+        {{each result value i}}
+            {{ if (i==7)}}
+        <div class="more"  data-appear="1">
+            <a href="javascript:;">
+                {{@value.img}}
+                <p>{{value.name}}</p>
+            </a>
+        </div>
+        {{ else if (i>=8)}}
+        <div style="display:none;" class="disappear">
+            <a href="{{value.titlehref}}">
+            {{@value.img}}
+            <p>{{value.name}}</p>
+        </a>
+     </div>
+     {{ else}}
+     <div>
+        <a href="{{value.titlehref}}">
+            {{@value.img}}
+            <p>{{value.name}}</p>
+        </a>
+    </div>
+    {{/if}}
+
+{{/each}}
+</script>
+
+
+    <!-- 折扣内容模板 -->
+
+    <script id="productTpl" type="text/html">
+        {{each result value}}
+             <li>
+                <a href="#">
+                    <div class="left-content">
+                        {{@value.productImgSm}}
+                    </div>
+                    <div class="right-content">
+                        <p class="product-name">
+                            {{value.productName}} 
+                            <span class="price">{{value.productPinkage}}</span>
+                        </p>
+                        <div class="product-from">
+                            {{value.productFrom}} | {{value.productTime}}
+                
+                         
+                        </div>
+                        <i class="icon-common fa fa-commenting-o"></i>
+                    
+                        <span class="person">{{value.productComCount.replace('有','').replace('人评论','')}}</span>
+                    </div>
+                </a>
+            </li>
+        {{/each}}
+
+
+
+
+</script>
+
+    <script src="lib/mui/js/mui.js"></script>
+    <script src="lib/artTemplate/template-web.js"></script>
+    <script src="lib/zepto/zepto.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

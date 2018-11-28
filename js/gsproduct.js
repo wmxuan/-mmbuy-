@@ -44,14 +44,13 @@ $(function () {
                         var html = template("choiceshopTpl", data);
                         $(".shopul").html(html);
                     } else if (url =="api/getgsproduct"){ 
-                        data.nowshopId = that.shopId;
-                        data.nowareaId = that.areaId;
                         console.log(data);
                         var html = template("commodityTpl",data);
                         $(".mui-scroll").html(html);
                         mui('.mui-scroll-wrapper').scroll({
                             deceleration: 0.0005 //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
                         });
+                        mui('.mui-scroll-wrapper').scroll().scrollTo(0, 0, 1000); //100毫秒滚动到顶
                     }
                 }
             })
@@ -83,6 +82,4 @@ $(function () {
     mmbuy.sendajax("api/getgsshoparea");
     mmbuy.sendajax("api/getgsproduct");
     mmbuy.changeId();
-
-
 })

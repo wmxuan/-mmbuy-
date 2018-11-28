@@ -1,0 +1,83 @@
+/* 导入公共样式 */
+@import 'base.less';
+
+
+/* 头部区域 */
+// #header{
+//     height: 0.44rem;
+//     background-color: #ff4e49;
+// }
+
+// /* 底部区域 */
+// #footer{
+//     height: 0.96rem;
+//     background-color: #232a34;
+// }
+.border{
+    border: 1px solid #ccc;
+}
+.border-tb{
+    border-top:1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+/* 主体区域 */
+#main{
+    // padding: 0.02rem;
+    background-color: #fff;
+    height: auto;
+    .product-content{
+        .left{
+           padding: 0.02rem;
+           min-height: 2.5rem;
+            .title{
+                /* 超出隐藏 */
+                overflow: hidden;
+                /* 文本超出显示... */
+                text-overflow: ellipsis;
+                /* CSS盒模型必须设置 */
+                display: -webkit-box;
+                /* 定义子元素的排列方向 垂直方向 */
+                -webkit-box-orient: vertical;
+                /* 垂直方向 定义子元素排列的函数 */
+                -webkit-line-clamp: 2;
+                font-weight: bold;
+                color: black;
+                margin-bottom: 0.05rem;
+                height: 0.41rem;
+            }
+            .price{
+                color: #ff6c00;
+                margin-bottom: 0.05rem;
+                /* 超出隐藏 */
+                overflow: hidden;
+                /* 文本超出显示... */
+                text-overflow: ellipsis;
+                /* CSS盒模型必须设置 */
+                display: -webkit-box;
+                /* 定义子元素的排列方向 垂直方向 */
+                -webkit-box-orient: vertical;
+                /* 垂直方向 定义子元素排列的函数 */
+                -webkit-line-clamp: 1;
+                height: 0.2rem;
+                
+            }
+            .info{
+                color: #a1a1a1;
+                font-size: 0.12rem;
+            }
+            a{ 
+               display: block;
+               padding: 0.1rem 0 0 0.1rem;
+               text-align: left;
+                img{
+                    width: 100%;
+                    height: 1.4rem;
+                }
+                p{
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+

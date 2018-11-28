@@ -1,193 +1,198 @@
 @import 'base.less';
 body {
-  background-color: #f1f1f1;
+    background-color: #f1f1f1;
+}
+
+#search {
+    z-index: 2;
+    background-color: #ffffff;
 }
 
 #main {
-  padding-top: 0.5rem;
-  box-sizing: border-box;
-  height: auto;
-  .head {
-    height: .35rem;
-    background-color: #f7f7f7;
-    color: #000000;
-    font-size: .16rem;
-    line-height: .35rem;
-    padding-left: .15rem;
+    padding-top: 0.5rem;
     box-sizing: border-box;
-  }
-  .tab {
-    .mui-segmented-control {
-      border: 1px solid #cccccc;
-      background-color: #eeeeee;
-      border-radius: 0px;
-      border-left: none;
-      border-right: none;
-      .mui-control-item {
-        color: #333;
-        border-left: none;
-        &.mui-active {
-          color: #fff;
-          background-color: #232a34;
-        }
-      }
+    height: auto;
+    .head {
+        height: .35rem;
+        background-color: #f7f7f7;
+        color: #000000;
+        font-size: .16rem;
+        line-height: .35rem;
+        padding-left: .15rem;
+        box-sizing: border-box;
     }
-  }
-  .content {
-    width: 100%;
-    margin-bottom: 20px;
-    [data-content="tab1"] {
-      width: 100%;
-      >.brandranking-wrap {
-        width: 100%;
-        >.brandranking-cell {
-          height: .8rem;
-          padding: .1rem;
-          border-bottom: 1px solid #cccccc;
-          width: 100%;
-          >a {
-            width: 100%;
-            display: flex;
-            justify-content: flex-start;
-            >.brandranking-tag-wrap {
-              width: 40px;
-              >.brandranking-tag {
-                display: inline-block;
-                text-align: center;
-                line-height: 20px;
-                width: 20px;
-                height: 20px;
-                color: #fff;
-                background-color: #cccccc;
-              }
-            }
-            >.brandranking {
-              flex: 1;
-              >.brandranking-title {
-                font-size: 16px;
-                color: #000;
-              }
-              >.brandranking-label {
-                font-size: 14px;
-                padding-top: 10px;
-                color: #bbbbbb;
-              }
-            }
-            >.icon {
-              width: .2rem;
-              position: relative;
-              >span {
-                position: absolute;
-                top: 50%;
-                transform: translate(0, -50%);
-              }
-            }
-          }
-          &:first-child {
-            .brandranking-tag {
-              background-color: red !important;
-            }
-          }
-          &:nth-child(2) {
-            .brandranking-tag {
-              background-color: #f9a83f !important;
-            }
-          }
-          &:nth-child(3) {
-            .brandranking-tag {
-              background-color: #00d300 !important;
-            }
-          }
-        }
-      }
-    }
-    [data-content="tab2"] {
-      .mui-media-object {
-        width: 1rem;
-        max-width: 1rem;
-        >img {
-          width: 100%;
-        }
-      }
-      .title {
-        font-size: 0.15rem;
-        line-height: 0.2rem;
-        color: #000;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: pre-wrap;
-      }
-      .price {
-        padding-top: 0.15rem;
-        font-size: 0.2rem;
-        color: #ff4300;
-        position: relative;
-        >em {
-          font-style: normal;
-        }
-        >.brandName {
-          position: absolute;
-          right: 0;
-        }
-      }
-      .other {
-        padding-top: 0.1rem;
-        >span {
-          color: gray;
-        }
-      }
-    }
-    [data-content="tab3"] {
-      ul {
-        border: 1px solid #ccc;
-        li {
-          border: 1px solid #ccc;
-          margin: 10px;
-          padding: 10px;
-          .commentTitle {
-            display: flex;
-            justify-content: space-between;
-            height: 100px;
-            align-items: center;
-            white-space: pre-wrap;
-          }
-          .commentBox {
-            padding: 5px;
-            position: relative;
-            border: 1px solid #ccc;
-            background-color: #f1f1f1;
-            .name {
-              display: flex;
-              justify-content: space-between;
-              align-items: center;
-              .star {
-                img {
-                  width: 20px;
-                  height: 20px;
+    .tab {
+        .mui-segmented-control {
+            border: 1px solid #cccccc;
+            background-color: #eeeeee;
+            border-radius: 0px;
+            border-left: none;
+            border-right: none;
+            .mui-control-item {
+                color: #333;
+                border-left: none;
+                &.mui-active {
+                    color: #fff;
+                    background-color: #232a34;
                 }
-              }
             }
-            .content {
-              color: black;
-              white-space: pre-wrap;
-            }
-            .from {
-              color: red;
-            }
-            &::before {
-              content: '';
-              width: 0;
-              height: 0;
-              position: absolute;
-              left: 29px;
-              top: -8px;
-              border-bottom: 8px solid #ccc;
-              border-left: 8px solid transparent;
-              border-right: 8px solid transparent;
-            }
-          }
         }
-      }
     }
-  }
+    .content {
+        width: 100%;
+        margin-bottom: 20px;
+        [data-content="tab1"] {
+            width: 100%;
+            >.brandranking-wrap {
+                width: 100%;
+                >.brandranking-cell {
+                    height: .8rem;
+                    padding: .1rem;
+                    border-bottom: 1px solid #cccccc;
+                    width: 100%;
+                    >a {
+                        width: 100%;
+                        display: flex;
+                        justify-content: flex-start;
+                        >.brandranking-tag-wrap {
+                            width: 40px;
+                            >.brandranking-tag {
+                                display: inline-block;
+                                text-align: center;
+                                line-height: 20px;
+                                width: 20px;
+                                height: 20px;
+                                color: #fff;
+                                background-color: #cccccc;
+                            }
+                        }
+                        >.brandranking {
+                            flex: 1;
+                            >.brandranking-title {
+                                font-size: 16px;
+                                color: #000;
+                            }
+                            >.brandranking-label {
+                                font-size: 14px;
+                                padding-top: 10px;
+                                color: #bbbbbb;
+                            }
+                        }
+                        >.icon {
+                            width: .2rem;
+                            position: relative;
+                            >span {
+                                position: absolute;
+                                top: 50%;
+                                transform: translate(0, -50%);
+                            }
+                        }
+                    }
+                    &:first-child {
+                        .brandranking-tag {
+                            background-color: red !important;
+                        }
+                    }
+                    &:nth-child(2) {
+                        .brandranking-tag {
+                            background-color: #f9a83f !important;
+                        }
+                    }
+                    &:nth-child(3) {
+                        .brandranking-tag {
+                            background-color: #00d300 !important;
+                        }
+                    }
+                }
+            }
+        }
+        [data-content="tab2"] {
+            .mui-media-object {
+                width: 1rem;
+                max-width: 1rem;
+                >img {
+                    width: 100%;
+                }
+            }
+            .title {
+                font-size: 0.15rem;
+                line-height: 0.2rem;
+                color: #000;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: pre-wrap;
+            }
+            .price {
+                padding-top: 0.15rem;
+                font-size: 0.2rem;
+                color: #ff4300;
+                position: relative;
+                >em {
+                    font-style: normal;
+                }
+                >.brandName {
+                    position: absolute;
+                    right: 0;
+                }
+            }
+            .other {
+                padding-top: 0.1rem;
+                >span {
+                    color: gray;
+                }
+            }
+        }
+        [data-content="tab3"] {
+            ul {
+                border: 1px solid #ccc;
+                li {
+                    border: 1px solid #ccc;
+                    margin: 10px;
+                    padding: 10px;
+                    .commentTitle {
+                        display: flex;
+                        justify-content: space-between;
+                        height: 100px;
+                        align-items: center;
+                        white-space: pre-wrap;
+                    }
+                    .commentBox {
+                        padding: 5px;
+                        position: relative;
+                        border: 1px solid #ccc;
+                        background-color: #f1f1f1;
+                        .name {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            .star {
+                                img {
+                                    width: 20px;
+                                    height: 20px;
+                                }
+                            }
+                        }
+                        .content {
+                            color: black;
+                            white-space: pre-wrap;
+                        }
+                        .from {
+                            color: red;
+                        }
+                        &::before {
+                            content: '';
+                            width: 0;
+                            height: 0;
+                            position: absolute;
+                            left: 29px;
+                            top: -8px;
+                            border-bottom: 8px solid #ccc;
+                            border-left: 8px solid transparent;
+                            border-right: 8px solid transparent;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

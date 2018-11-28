@@ -25,13 +25,13 @@ $(function () {
     location: '#pingLun'
 
   })
-  console.log()
+  // console.log(),
+  m.tp2();
 })
 
 function MMBBrand() {
   this.v = '1.0';
 }
-
 MMBBrand.prototype = {
   constructor: MMBBrand,
   config: {
@@ -62,5 +62,41 @@ MMBBrand.prototype = {
       }
     })
     return that;
+  },
+  tp2: function (data) {
+    var that = this;
+    console.log("tp2 go");
+    $('#coment-tab').on('click',function () {
+      var id = getQueryString("brandtitleid");
+      $.ajax({
+        url: that.config.urlHead +"api/getproductcom",
+        type: 'get',
+        data: {
+          productid: id
+        },
+        dataType: "json",
+        success: function (data) {
+          console.log(data);
+          var html = template('pingLunTpl', data);
+          console.log(html);
+          $('.mui-table-view').html(html);
+        }
+      });
+
+    })
+    //返回顶部
+    $('.to-top').on('tap', function () {
+      mui('.mui-scroll-wrapper').scroll().scrollTo(0, 0, 100); //100毫秒滚动到顶
+    })
   }
+}
+function getQueryString(name) {
+  var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
+  var r = window.location.search.substr(1).match(reg);
+  if (r != null) {
+      // 用了另一种转码方式 我们是默认转码方式 使用decodeURI
+      // return unescape(r[2]);
+      return decodeURI(r[2]);
+  }
+  return null;
 }

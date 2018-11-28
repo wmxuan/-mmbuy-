@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商场导航</title>
+    <!-- 引入mui的css -->
+    <link rel="stylesheet" href="lib/mui/css/mui.min.css">
+    <!-- 引入字体图标的css -->
+    <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.css">
+    <!-- 引入自己页面的less文件 -->
+    <link rel="stylesheet/less" href="less/sitenav.less">
+    <!-- 引入less.js的编译文件 -->
+    <script src="lib/less/less.js"></script>
+    <!-- 引入rem.js -->
+    <script src="./js/rem.js"></script>
+
+</head>
+
+<body>
+    <!-- 头部区域 -->
+    <header id="header">
+        <a href="index.html" class="fa fa-angle-left left"></a>
+        <h1>商场导航</h1>
+        <!-- <a href="javascript:;" class="logo"><img src="./images/header_logo.png" alt=""></a> -->
+        <a href="#" class="fa fa-download right"></a>
+    </header>
+
+    <!-- 主题区域 -->
+    <main id="main">
+        <div class="getSiteTpl">
+
+        </div>
+    </main>
+    <div class="footnav">
+        <span>
+            <a href="index.html">首页</a>
+            <span>>商城导航</span>
+        </span>
+    </div>
+
+    <!-- 底部区域 -->
+    <footer id="footer">
+        <div class="top">
+            <a href="login.html">登录</a>
+            <a href="register.html">注册</a>
+            <a href="javascript:;"><i class="fa fa-arrow-up"></i>返回顶部</a>
+        </div>
+        <div class="bottom">
+            <p class="content"><span>手机APP下载</span>慢慢买手机版--掌上比价平台</p>
+            <p class="url">m.manmanbuy.com</p>
+        </div>
+    </footer>
+
+
+    <script id="siteNavTpl" type="text/html">
+        {{each result value}}
+       <a href="{{value.navHref}}">
+           <img src="{{value.navImg}}">
+           <span>{{value.navTitle}}</span>
+       </a>
+       {{/each}}
+    </script>
+
+    <!-- 引入MUI的JS文件，提供MUI的JS插件 -->
+    <script src="./lib/mui/js/mui.js"></script>
+    <!-- 引入zepto的JS文件，操作元素发送请求，zepto相当于jQuery -->
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <!-- 引入模板引擎文件，用于渲染模板 -->
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <!-- 引入自己的JS文件 -->
+    <script src="./js/sitenav.js"></script>
+</body>
+
+</html>

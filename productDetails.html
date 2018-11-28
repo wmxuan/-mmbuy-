@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商品详情</title>
+    <!-- 1. 引入mui的CSS -->
+    <link rel="stylesheet" href="lib/mui/css/mui.min.css">
+    <!-- 2. 引入字体图标的CSS -->
+    <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.css">
+    <!-- 3. 引入商品列表的less文件 -->
+    <link rel="stylesheet/less" href="less/productDetails.less">
+    <!-- 4. 引入less.js编译器文件 -->
+    <script src="lib/less/less.js"></script>
+</head>
+
+<body>
+    <!-- 头部区域 -->
+    <header id="header">
+        <!-- <a href="index.html" class="fa fa-angle-left left"></a>
+        <h1>登陆</h1> -->
+        <a href="index.html" class="logo"><img src="./images/header_logo.png" alt=""></a>
+        <a href="#" class="fa fa-download right"></a>
+    </header>
+    <!-- 商品列表区域 -->
+    <main id="main">
+        <!-- 商品导航区域 -->
+        <div class="product-nav">
+            <div class="nav-left">
+                <a href="#">首页></a>
+                <a href="#">全部分类></a>
+                <a href="/productlist.html">数码相机</a>
+            </div>
+            <div class="nav-right">
+                <button type="button">筛选</button>
+            </div>
+        </div>
+        <!-- 商品详情区域 -->
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <section id="details">
+                    <div class="product-parameter">
+                        <!-- <div class="product-image">
+                            <span class="product-title">奥林巴斯/OLYMPUS TG-4 1600万像素 数码相机 </span>
+                            <img src="images/xji02.jpg" alt="" class="map">
+                            <img src="images/sc.jpg" alt="" class="sc">
+                        </div>
+                        <div class="property">
+                            <ul>
+                                <li class="active"><a href="#">比较购买</a></li>
+                                <li><a href="#">产品参数</a></li>
+                                <li><a href="#">优选评论</a></li>
+                            </ul>
+                        </div>
+                        <div class="channel">
+                            <div class="left">
+                                <img class="sn-logo" src="http://sf.manmanbuy.com/images/sitelogo/6.png" alt="">
+                                <span>苏宁易购</span>
+                            </div>
+                            <div class="right">
+                                <span>￥2488.00</span>
+                                <a href="#">去购买</a>
+                            </div>
+                        </div>
+                        <div class="explain">
+                            * 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。
+                        </div> -->
+                    </div>
+                    <!-- 评价标题区域 -->
+                    <div class="evaluate">
+                        网友评价
+                    </div>
+                    <!-- 评价内容区域 -->
+                    <div class="evaluate-content">
+                        <ul class="mui-table-view">
+                            <li class="mui-table-view-cell">
+                                <div class="title">
+                                    <div class="title-left">
+                                        <span> 胡***朋 </span>
+                                        <div class="star">
+                                            <img src="images/star.svg" alt="">
+                                            <img src="images/star.svg" alt="">
+                                            <img src="images/star.svg" alt="">
+                                            <img src="images/star.svg" alt="">
+                                            <img src="images/star.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="title-right">
+                                        <span>2015/10/6</span>
+                                        <p>购买自：亚马孙</p>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    使用了一周整体不错，主要是为了看纪录片和足球。
+                                    装在窗户上有种大鱼缸的感觉哈！清晰度不错色彩也可以，
+                                    应该说对得起2200的价格！还送了五年乐视会员，看英超所有比赛都free，
+                                    但乐观乐视内容这块还不太丰富，应为家里也有百事通bestv和小米盒子，
+                                    比较了下，电影百事通最好，纪录片小米最好，只有体育这块乐视比那两家好，
+                                    还要多努力啊！电视本身有个不足，音响太差，太山寨了！
+                                    而且不支持3.5mm接口或红白莲音频输出，害得我折腾半天，
+                                    必须买光纤音频线
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="evaluate-content">
+                        <ul class="mui-table-view">
+                            <li class="mui-table-view-cell">
+                                <div class="title">
+                                    <div class="title-left">
+                                        <span> 胡***朋 </span>
+                                        <div class="star">
+                                            <img src="images/star.svg" alt="">
+                                            <img src="images/star.svg" alt="">
+                                            <img src="images/star.svg" alt="">
+                                            <img src="images/star.svg" alt="">
+                                            <img src="images/star.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="title-right">
+                                        <span>2015/10/6</span>
+                                        <p>购买自：亚马孙</p>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    使用了一周整体不错，主要是为了看纪录片和足球。
+                                    装在窗户上有种大鱼缸的感觉哈！清晰度不错色彩也可以，
+                                    应该说对得起2200的价格！还送了五年乐视会员，看英超所有比赛都free，
+                                    但乐观乐视内容这块还不太丰富，应为家里也有百事通bestv和小米盒子，
+                                    比较了下，电影百事通最好，纪录片小米最好，只有体育这块乐视比那两家好，
+                                    还要多努力啊！电视本身有个不足，音响太差，太山寨了！
+                                    而且不支持3.5mm接口或红白莲音频输出，害得我折腾半天，
+                                    必须买光纤音频线
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="evaluate-content">
+                        <ul class="mui-table-view">
+                            <li class="mui-table-view-cell">
+                                <div class="title">
+                                    <div class="title-left">
+                                        <span> 胡***朋 </span>
+                                        <div class="star">
+                                            <img src="images/star.svg" alt="">
+                                            <img src="images/star.svg" alt="">
+                                            <img src="images/star.svg" alt="">
+                                            <img src="images/star.svg" alt="">
+                                            <img src="images/star.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="title-right">
+                                        <span>2015/10/6</span>
+                                        <p>购买自：亚马孙</p>
+                                    </div>
+                                </div>
+                                <div class="content">
+                                    使用了一周整体不错，主要是为了看纪录片和足球。
+                                    装在窗户上有种大鱼缸的感觉哈！清晰度不错色彩也可以，
+                                    应该说对得起2200的价格！还送了五年乐视会员，看英超所有比赛都free，
+                                    但乐观乐视内容这块还不太丰富，应为家里也有百事通bestv和小米盒子，
+                                    比较了下，电影百事通最好，纪录片小米最好，只有体育这块乐视比那两家好，
+                                    还要多努力啊！电视本身有个不足，音响太差，太山寨了！
+                                    而且不支持3.5mm接口或红白莲音频输出，害得我折腾半天，
+                                    必须买光纤音频线
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </section>
+
+
+
+
+                <!-- 品牌排行区域 -->
+                <div class="product-rank mui-table-view">
+                    <ul class="mui-table-view">
+                        <li class="mui-table-view-cell">
+                            <a class="mui-navigate-right">品牌排行</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 底部区域 -->
+                <footer id="footer">
+                    <div class="top">
+                        <a href="/login.html">登录</a>
+                        <a href="/register.html">注册</a>
+                        <a href="javascript:;" class="return"><i class="fa fa-arrow-up"></i>返回顶部</a>
+                    </div>
+                    <div class="bottom">
+                        <p class="content"><span>手机APP下载</span>慢慢买手机版--掌上比价平台</p>
+                        <p class="url">m.manmanbuy.com</p>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </main>
+    <!-- 实现商品详情渲染模版 -->
+    <script type="text/html" id="productTpl">
+        {{each result value}}
+
+    <div class="product-image">
+            <p class="product-title">{{value.productName}} </p>
+            <div class="map">
+                {{@value.productImg}}
+            </div>
+            <img src="images/sc.jpg" alt="" class="sc">
+        </div>
+        <div class="property">
+            <ul>
+                <li class="active"><a href="#">比较购买</a></li>
+                <li><a href="#">产品参数</a></li>
+                <li><a href="#">优选评论</a></li>
+            </ul>
+        </div>
+        <div class="channel">
+            <div class="left">
+                <img class="sn-logo" src="http://sf.manmanbuy.com/images/sitelogo/6.png" alt="">
+                <span>苏宁易购</span>
+            </div>
+            <div class="right">
+                <span>￥2488.00</span>
+                <a href="#">去购买</a>
+            </div>
+        </div>
+        <div class="explain">
+            * 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。
+        </div>
+
+    {{/each}}
+    </script>
+    <!-- .实现评论的渲染模版 -->
+    <script type="text/html" id="commentTpl">
+        {{each result value}}
+         <li class="mui-table-view-cell">
+            <div class="title">
+                <div class="title-left">
+                    <span> {{value.comName}} </span>
+                    <div class="star">
+                        <img src="images/star.svg" alt="">
+                        <img src="images/star.svg" alt="">
+                        <img src="images/star.svg" alt="">
+                        <img src="images/star.svg" alt="">
+                        <img src="images/star.svg" alt="">
+                    </div>
+                </div>
+                <div class="title-right">
+                    <span>{{value.comTime}}</span>
+                    <p>{{value.comFrom}}</p>
+                </div>
+            </div>
+            <div class="content">
+                    {{value.comContent}}
+            </div>
+        </li>
+       {{/each}}
+    </script>
+    <!-- 1. 引入mui的JS -->
+    <script src="lib/mui/js/mui.js"></script>
+    <!-- 2. 引入模板引擎的 注意引入template-web.js 最新版最简洁的  -->
+    <script src="lib/artTemplate/template-web.js"></script>
+    <!-- 3. 引入zepto的JS ajax dom操作的Js库 -->
+    <script src="lib/zepto/zepto.min.js"></script>
+    <!-- 4. 引入商品列表的JS文件 -->
+    <script src="js/productDetails.js"></script>
+</body>
+
+</html>

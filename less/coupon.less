@@ -1,0 +1,66 @@
+/* 引入公共样式 */
+@import 'base.less';
+body{
+    background-color: #fff;
+    padding-bottom: 1.7rem;
+}
+
+
+
+/* 主体样式 */
+#main{
+    // height:auto;
+    margin-top: 0.15rem;
+ .mui-scroll {
+     ul {
+         display: flex;
+         flex-wrap: wrap;
+         li {
+             width: 50%;
+             padding: 0.03rem;
+             a {
+                 display: block;
+                 width: 100%;
+                //  height: 100%;
+                 text-align: center;
+                 border: 0.01rem solid #ccc;
+                 img {
+                     margin-top: 0.1rem;
+                     width: 0.5rem;
+                     height: 0.5rem;
+                     border-radius: 50%;
+                     border: 0.02rem solid #d72d3e;
+                 }
+                 p {
+                     color: #000;
+                     padding: 0.05rem 0 0.15rem 0;
+                 }
+             }
+         }
+     }
+ }
+
+ }
+/* 导航条样式 */
+#nav{
+    width: 100%;
+    height: 0.35rem;
+    // position:absolute ;
+    .discount-footer{
+        line-height: 0.35rem;
+        padding-left: 0.1rem;
+        border-top: 0.01rem solid #ddd;
+        border-bottom: 1px solid #ddd;
+        background: linear-gradient(to top,#ddd,#fff);
+        
+        a{
+            color: #000;
+        }
+    }
+}
+/* 底部样式 */
+#footer{
+    position: fixed;
+    bottom: 0;
+    z-index: 998;
+}

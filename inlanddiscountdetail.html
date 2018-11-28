@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>国内折扣</title>
+    <!-- 引入mui的css样式 -->
+    <link rel="stylesheet" href="lib/mui/css/mui.min.css">
+    <!-- 引入字体符号的css -->
+    <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.css">
+    <!-- 引入discount-product的less文件 -->
+    <link rel="stylesheet/less" href="less/inlanddiscountdetail.less">
+    <!-- 引入解析less的js文件 -->
+    <script src="lib/less/less.js"></script>
+</head>
+
+<body>
+   <!-- 头部区域 -->
+   <header id="header">
+    <a href="index.html" class="fa fa-angle-left left"></a>
+    <h1>国内折扣</h1>
+    <!-- <a href="javascript:;" class="logo"><img src="./images/header_logo.png" alt=""></a> -->
+    <a href="#" class="fa fa-download right"></a>
+    </header>
+    <!-- 主体区域 -->
+    <main id="main">
+        <!-- 标题 -->
+        <div class="product-title">
+            <h4> Apple iPhone 6 64GB 金色 移动联通电信4G手机 </h4>
+            <h5>4088.00</h5>
+        </div>
+        <!-- 产品信息 -->
+        <div class="product-info">
+            <span class="mail">苏宁易购</span>
+            <span class="time">10-22 13:29</span>
+            <span class="author">慢慢买</span>
+        </div>
+        <!-- 产品内容 -->
+        <div class="product-content ">
+            <ul>
+                <li class="mui-table-view-cell mui-media">
+                     <img class="mui-media-object mui-pull-right " src="images/haitao.png">
+                    <div class="mui-media-body">
+                        <p>64G果6，需要的可以入手。 苏宁自营，现在参加大聚惠，4088到手，不玩游戏用用蛮好的。64G果6，需要的可以入手。
+                            苏宁自营，现在参加大聚惠，4088到手，不玩游戏用用蛮好的。64G果6，需要的可以入手。
+                            苏宁自营，现在参加大聚惠，4088到手，不玩游戏用用蛮好的。64G果6，需要的可以入手。
+                            苏宁自营，现在参加大聚惠，4088到手，不玩游戏用用蛮好的。64G果6，需要的可以入手。
+                            苏宁自营，现在参加大聚惠，4088到手，不玩游戏用用蛮好的。64G果6，需要的可以入手。
+                            苏宁自营，现在参加大聚惠，4088到手，不玩游戏用用蛮好的。64G果6，需要的可以入手。
+                            苏宁自营，现在参加大聚惠，4088到手，不玩游戏用用蛮好的。64G果6，需要的可以入手。 苏宁自营，现在参加大聚惠，4088到手，不玩游戏用用蛮好的。</p>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+        <!-- 产品图片 -->
+        <div class="product-img">
+            <img src="http://image3.suning.cn/uimg/b2c/newcatentries/0000000000-000000000123129054_1_200x200.jpg" alt="">
+        </div>
+        <!-- 立即购买按钮 -->
+        <button type="button" class="goBuy">前往购买</button>
+        <!-- 二维码 -->
+        <div class="vCode">
+            <img src="images/ic_kb.png" alt="">
+        </div>
+        <!-- 发表评论 -->
+        <div class="comment">
+            <h5>发表评论</h5>
+            <textarea class="comment-area"></textarea>
+        </div>
+        <!-- 发表评论按钮 -->
+        <div class="add-comment">
+            <button type="button">发表评论</button>
+        </div>
+        <!-- 最新评论 -->
+        <div class="newComment">
+            <h5>最新评论</h5>
+            <ul>
+                <li>
+                    <img src="http://home.manmanbuy.com/upface/face/1466230634_162.jpg" alt="">
+                    <div class="users">
+                        <div class="user-info">
+                            <p class="user-name">赶鸭子上架</p>
+                            <p class="user-time">2016/10/25 14:18:45</p>
+                        </div>
+                        <div class="user-content">
+                            2313213
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </main>
+    <footer id="footer">
+        <div class="top">
+            <a href="javascript:;">登录</a>
+            <a href="javascript:;">注册</a>
+            <a href="javascript:;" id="goUp"><i class="fa fa-arrow-up"></i>返回顶部</a>
+        </div>
+        <div class="bottom">
+            <p class="content"><span>手机APP下载</span>慢慢买手机版--掌上比价平台</p>
+            <p class="url">m.manmanbuy.com</p>
+        </div>
+        </footer>
+<script id="discountTpl" type="text/html">
+    {{each result value}}
+           <!-- 标题 -->
+           <div class="product-title">
+                <h4>{{value.productName}}</h4>
+                <h5>{{value.productPrice}}</h5>
+            </div>
+            <!-- 产品信息 -->
+            <div class="product-info">
+                <span class="mail">{{value.productFrom}}</span>
+                <span class="time">{{value.productTime}}</span>
+                <span class="author">{{value.productTips}}</span>
+            </div>
+            <!-- 产品内容 -->
+            <div class="product-content ">
+                <ul>
+                    <li class="mui-table-view-cell mui-media">
+                            <img class="mui-media-object mui-pull-right " src="images/j_sources_img_2016_10_24_190_190_0_36618798b6e1a98d9f4ae8f7a195f41b.jpg">
+                        <div class="mui-media-body">
+            <p>{{value.productInfo}}</p>
+                        </div>
+                    </li>
+                </ul>
+    
+            </div>
+            <!-- 产品图片 -->
+            <div class="product-img">
+                {{@value.productImg}}
+            </div>
+            <!-- 立即购买按钮 -->
+            <button type="button" class="goBuy">前往购买</button>
+            <!-- 二维码 -->
+            <div class="vCode">
+                <img src="images/mmbweixin2.png" alt="">
+            </div>
+            <!-- 发表评论 -->
+            <!-- <div class="comment">
+                <h5>发表评论</h5>
+                <textarea class="comment-area"></textarea>
+            </div> -->
+            <!-- 发表评论按钮 -->
+            <!-- <div class="add-comment">
+                <button type="button">发表评论</button>
+            </div> -->
+            <!-- 最新评论 -->
+            <!-- <div class="newComment">
+                <h5>最新评论</h5>
+                <ul>
+                    <li>
+                        <img src="http://home.manmanbuy.com/upface/face/1466230634_162.jpg" alt="">
+                        <div class="users">
+                            <div class="user-info">
+                                <p class="user-name">赶鸭子上架</p>
+                                <p class="user-time">2016/10/25 14:18:45</p>
+                            </div>
+                            <div class="user-content">
+                                2313213
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div> -->
+            {{@value.productComment}}
+             <!-- 底部区域 -->
+
+    {{/each}}
+</script>  
+</body>
+<!-- 引入mui的js文件 -->
+<script src="lib/mui/js/mui.js"></script>
+<!-- 引入zepto的文件 -->
+<script src="lib/zepto/zepto.min.js"></script>
+<!-- 引入模板文件 -->
+<script src="lib/artTemplate/template-web.js"></script>
+<!-- 引入inlanddiscount的js文件 -->
+<script src="js/inlanddiscountdetail.js"></script>
+</html>

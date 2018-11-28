@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>国内折扣</title>
+    <!-- 引入mui的css样式 -->
+    <link rel="stylesheet" href="lib/mui/css/mui.min.css">
+    <!-- 引入字体符号的css -->
+    <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.css">
+    <!-- 引入inlanddiscount的less文件 -->
+    <link rel="stylesheet/less" href="less/inlanddiscount.less">
+    <!-- 引入解析less的js文件 -->
+    <script src="lib/less/less.js"></script>
+</head>
+
+<body>
+    <!-- 头部区域 -->
+    <header id="header">
+        <a href="index.html" class="fa fa-angle-left left"></a>
+        <h1>国内折扣</h1>
+        <!-- <a href="javascript:;" class="logo"><img src="./images/header_logo.png" alt=""></a> -->
+        <a href="#" class="fa fa-download right"></a>
+        </header>
+    <!-- 主体区域 -->
+    <main id="main">
+        <div class="product-content">
+            <div class="mui-row">
+                <div class="mui-col-xs-6 left ">
+                    <a href="#" class="border">
+                        <img src="http://img10.360buyimg.com/n7/jfs/t1720/256/513904188/195330/ce31e971/55d2cf3eNc2d117d0.jpg"
+                            alt="">
+                        <p class="title">西域美农新疆特产五星和田红枣250g*2西域美农新疆特产五星和田红枣250g*2</p>
+                        <p class="price">19.8元(5件99元)</p>
+                        <p class="info">京东商城 | <span class="time">10-22 13:28</span></p>
+                    </a>
+                </div>
+                <div class="mui-col-xs-6 left">
+                    <a href="#" class="border">
+                        <img src="http://img10.360buyimg.com/n7/jfs/t1720/256/513904188/195330/ce31e971/55d2cf3eNc2d117d0.jpg"
+                            alt="">
+                        <p class="title">西域美农新疆特产五星和田红枣250g*2</p>
+                        <p class="price">19.8元(5件99元)</p>
+                        <p class="info">京东商城 | <span class="time">10-22 13:28</span></p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    
+<!-- 底部区域 -->
+<footer id="footer">
+    <div class="top">
+        <a href="javascript:;">登录</a>
+        <a href="javascript:;">注册</a>
+        <a href="javascript:;" id="goUp"><i class="fa fa-arrow-up"></i>返回顶部</a>
+    </div>
+    <div class="bottom">
+        <p class="content"><span>手机APP下载</span>慢慢买手机版--掌上比价平台</p>
+        <p class="url">m.manmanbuy.com</p>
+    </div>
+</footer>
+<script id="queryProductTpl" type="text/html">
+    {{each result value}}
+            <div class="mui-col-xs-6 left ">
+                <a href="inlanddiscountdetail.html?id={{value.productId}}" class="border">
+                    {{@value.productImg}}
+                    <p class="title">{{value.productName}}</p>
+                    <p class="price">{{value.productPrice}}</p>
+                    <p class="info">{{value.productFrom}} | <span class="time">{{value.productTime}}</span></p>
+                </a>
+            </div>
+    {{/each}}
+</script>  
+</body>
+ <!-- 引入mui的js文件 -->
+ <script src="lib/mui/js/mui.min.js"></script>
+ <!-- 引入zepto的文件 -->
+ <script src="lib/zepto/zepto.min.js"></script>
+ <script src="lib/zepto/fx.js"></script>
+ <!-- 引入模板文件 -->
+ <script src="lib/artTemplate/template-web.js"></script>
+ <!-- 引入inlanddiscount的js文件 -->
+ <script src="js/inlanddiscount.js"></script>
+</html>

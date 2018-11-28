@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 1.MUI-css文件  -->
+    <link rel="stylesheet" href="lib/mui/css/mui.css">
+    <!-- 2.字体图库css -->
+    <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.css">
+    <!-- 3.本页less -->
+    <link rel="stylesheet/less" href="less/coupon.less">
+    <!-- 4.less-js文件  -->
+    <script src="lib/less/less.js"></script>
+    <!-- 5.rem-js文件夹 -->
+    <script src="js/rem.js"></script>
+</head>
+
+<body>
+   <!-- 头部区域 -->
+   <header id="header">
+    <a href="index.html" class="fa fa-angle-left left"></a>
+    <h1>优惠券</h1>
+    <!-- <a href="javascript:;" class="logo"><img src="./images/header_logo.png" alt=""></a> -->
+    <a href="#" class="fa fa-download right"></a>
+</header>
+
+    <!-- 主体 -->
+    <main id="main">
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <ul class="navList">
+                    <li>
+                        <a href="couponproduct.html">
+                            <img src="http://www.juanlaoda.com/ImageUpload/2013310191729944.jpg" alt="">
+                            <p>肯德基</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="couponproduct.html">
+                                <img src="http://www.juanlaoda.com/ImageUpload/2013310204621492.jpg" alt="">
+                            <p>必胜客</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="couponproduct.html">
+                                <img src="http://www.juanlaoda.com/ImageUpload/2013310204621492.jpg" alt="">
+                            <p>棒约翰</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="couponproduct.html">
+                            <img src="http://www.juanlaoda.com/ImageUpload/201321212356588.jpg" alt="">
+                            <p>哈根达斯</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+   
+    <!-- 导航条 -->
+    <section id="nav">
+            <div class="discount-footer">
+                    <a href="index.html">首页</a>
+                    >
+                    <a href="coupon.html">优惠券</a>
+            </div>
+    </section>
+   <!-- 底部区域 -->
+    <footer id="footer">
+        <div class="top">
+            <a href="login.html">登录</a>
+            <a href="register.html">注册</a>
+            <a href="javascript:;"><i class="fa fa-arrow-up"></i>返回顶部</a>
+        </div>
+        <div class="bottom">
+            <p class="content"><span>手机APP下载</span>慢慢买手机版--掌上比价平台</p>
+            <p class="url">m.manmanbuy.com</p>
+        </div>
+    </footer>
+
+    <!-- 导航模板 -->
+    <script id="navListTpl" type="text/html">
+        {{ each result value }}
+        <li>
+            <a href="{{ value.couponLink}}?couponid={{ value.couponId }}">
+                 <img src="{{ value.couponImg }}" alt="">
+                 <p>{{ value.couponTitle}}</p>
+            </a>
+        </li>
+        {{ /each }}
+    </script>
+</body>
+<!-- MUI-js文件 -->
+<script src="lib/mui/js/mui.js"></script>
+<!-- zepoto js文件 -->
+<script src="lib/zepto/zepto.min.js"></script>
+<!-- 模板引擎 -->
+<script src="lib/artTemplate/template-web.js"></script>
+<!-- 本页的js文件 -->
+<script src="js/coupon.js"></script>
+
+</html>

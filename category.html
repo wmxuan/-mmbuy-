@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>我的比价搜索</title>
+    <!-- 引入MUI的CSS文件。提供MUI样式 -->
+    <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
+    <!-- 引入字体图标的CSS文件，提供字体图标 -->
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css">
+    <!-- 引入比价搜索的less文件 -->
+    <link rel="stylesheet/less" href="./less/category.less">
+    <!-- 引入编译less文件的JS文件 -->
+    <script src="./lib/less/less.js"></script>
+    <!-- 引入rem的JS文件，要在前面引入因为他会影响到页面渲染 -->
+    <script src="./js/rem.js"></script>
+</head>
+
+<body>
+    <!-- 头部区域 -->
+    <header id="header">
+        <a href="javascript:;" class="logo"><img src="./images/header_logo.png" alt=""></a>
+        <a href="#" class="fa fa-download right"></a>
+    </header>
+    <!-- 搜索框 -->
+    <section id="search">
+        <input type="search" class="search" placeholder="请输入要搜索的内容">
+        <button type="button" class="btn-search">搜索</button>
+    </section>
+    <main id="main">
+        <ul class="mui-table-view title">
+            <li class="mui-table-view-cell mui-collapse">
+                <a class="mui-navigate-right" href="#">大 家 电</a>
+                <div class="mui-row mui-collapse-content product">
+                    <div class="mui-col-xs-4"><a href="javascript:;">电视</a></div>
+                    <div class="mui-col-xs-4"><a href="javascript:;">空调</a></div>
+                    <div class="mui-col-xs-4"><a href="javascript:;">影院</a></div>
+                    <div class="mui-col-xs-4"><a href="javascript:;">冰箱</a></div>
+                    <div class="mui-col-xs-4"><a href="javascript:;">DVD</a></div>
+                    <div class="mui-col-xs-4"><a href="javascript:;">音响/音箱</a></div>
+                    <div class="mui-col-xs-4"><a href="javascript:;">洗衣机</a></div>
+                    <div class="mui-col-xs-4"><a href="javascript:;">热水器</a></div>
+                    <div class="mui-col-xs-4"><a href="javascript:;">酒柜/冰吧/冷柜</a></div>
+                    <div class="mui-col-xs-4"><a href="javascript:;">消毒柜/洗碗机</a></div>
+                </div>
+            </li>
+        </ul>
+    </main>
+    <!-- 底部区域 -->
+    <footer id="footer">
+        <div class="top">
+            <a href="login.html">登录</a>
+            <a href="register.html">注册</a>
+            <a href="javascript:;" class="to-top"><i class="fa fa-arrow-up"></i>返回顶部</a>
+        </div>
+        <div class="bottom">
+            <p class="content"><span>手机APP下载</span>慢慢买手机版--掌上比价平台</p>
+            <p class="url">m.manmanbuy.com</p>
+        </div>
+    </footer>
+
+    <!-- 分类标题模板 -->
+    <script id="categoryTitleTpl" type="text/html">
+        {{if result.length>0}}
+            {{each result value}}
+            <li class="mui-table-view-cell mui-collapse">
+                <a class="mui-navigate-right" href="#" data-title-id="{{value.titleId}}">{{value.title}}</a>
+                <div class="mui-row mui-collapse-content product">
+                </div>
+            </li>
+            {{/each}}
+        {{else}}
+            <p>分类标题数据空了~</p>
+        {{/if}}
+    </script>
+
+    <!-- 分类列表模板 -->
+    <script id="categoryListTpl" type="text/html">
+        {{each result value}}
+            <div class="mui-col-xs-4"><a href="javascript:;" data-category-id="{{value.categoryId}}">{{value.category}}</a></div>
+        {{/each}}
+    </script>
+
+    <!-- 引入MUI的JS文件，提供MUI的JS插件 -->
+    <script src="./lib/mui/js/mui.js"></script>
+    <!-- 引入zepto的JS文件，操作元素发送请求，zepto相当于jQuery -->
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <!-- 引入模板引擎文件，用于渲染模板 -->
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <!-- 引入比价搜索页的JS文件 -->
+    <script src="./js/category.js"></script>
+</body>
+
+</html>

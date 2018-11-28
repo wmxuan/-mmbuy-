@@ -1,0 +1,222 @@
+@import "base.less";
+
+body{
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    
+}
+
+#main{
+    
+    //商品导航区域
+    .product-nav{
+        width: 100%;
+        height: .4rem;
+        background-color:#eee;
+        border-bottom: .01rem solid #ccc;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 .2rem;
+        line-height: .4rem;
+        position: fixed;
+        top: .45rem;
+        left: 0;
+        z-index: 999;
+        
+       
+        .nav-left{
+            >a{
+                color: #000;
+            }
+        }
+        .nav-right{
+            color: #000;
+            margin-top: .05rem;
+            line-height: .3rem;
+            
+            button{
+                border-radius: .05rem;
+                height: .3rem;
+                width: .5rem;
+                text-align: center;
+                background-color: #fbfbfb;
+               
+            }
+        }
+
+    }
+    //商品详情
+    #details{
+        padding-top:.4rem;
+        .product-parameter{
+            .product-image{
+                text-align: center;
+                padding: .2rem;
+                .product-title{
+                    font-size: .14rem;
+                    color: #333;
+                    text-align: left;
+                }
+                .map{
+                    width: 1.7rem;
+                    vertical-align: middle;
+                    display: inline-block;                   
+                }
+                .sc{
+                    width: .5rem;
+                    vertical-align: bottom;
+                }
+
+            }
+            .property{
+                ul{
+                    display: flex;
+                    height: .3rem;
+                    background-color: #ffc627;
+                    border-top: .01rem solid #cf6909;
+                    border-bottom: .01rem solid #cf6909;
+                    li{
+                        flex: 1;
+                        text-align: center;
+                        line-height: .3rem;
+                        &:nth-child(n+1){
+                            border-left:  .01rem solid #cf6909;
+                        }
+                        a{
+                            color: #fff;
+                        }
+                        &.active{
+                            background-color: #ea3900;
+                        }
+                    }
+                }
+            }
+            .channel{
+                height: .4rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: .05rem;
+                border-bottom: .01rem solid #ccc;
+                .left{
+                    .sn-logo{
+                        width: .16rem;
+                        margin-right: .05rem;
+                    }
+                    span{
+                        font-size: .14rem;
+                    }
+                }
+                .right{
+                    span{
+                        font-size: .14rem;
+                        color:red;
+                    }
+                    a{  
+                        display: inline-block;
+                        color: #fff;
+                        background-color: #ea3900;
+                        width: .56rem;
+                        height: .24rem;
+                        text-align: center;
+                        line-height: .24rem;
+                        border-radius: .05rem;
+                    }
+                    
+                }
+            }
+            .explain{
+                padding: .15rem .1rem;
+                border-bottom: .03rem solid #666;
+                font-size: .12rem;
+                color: #666;
+            }
+        }
+    //评价标题区域    
+        .evaluate{
+            height: .4rem;
+            background-color: #ccc;
+            margin-top: .01rem;
+            text-align: center;
+            line-height: .4rem;
+            font-size: .18rem;
+        }
+        //评价内容区域
+        .evaluate-content{
+            .title{
+                display: flex;
+                justify-content: space-between;
+                .title-left{
+                    span{
+                        font-size: .13rem;
+                        color:#666;
+                    }
+                    .star{
+                        img{
+                            width: .18rem;
+                        }
+                    }
+                }
+                .title-right{
+                    text-align: right;
+                    span{
+                        font-size: .12rem;                        
+                    }
+                    p{
+                        font-size: .13rem;
+                        color: #000     
+                    }
+                }
+            }
+            .content{
+                margin-top: .05rem;
+            }
+        }
+    }
+
+
+
+
+
+
+    //排行区域
+    .product-rank{
+        margin-top: .1rem;
+       margin-bottom: .3rem;
+       ul{
+           background-color: #ea3900;
+           height: .3rem;
+          li{
+            line-height: .3rem;
+          
+          a{
+              color: #fff;
+              font-size: .16rem;
+              padding: 0;
+              padding-left: .1rem;
+              padding-top:.01rem;
+             
+              &::after{
+                  color: #fff;
+                  font-size: .18rem;
+                  border: .01rem solid #fff;
+                  border-radius: 50%;
+                  text-align: center;
+              }           
+          }        
+        }
+        &::after{
+            height: 0;
+        }
+       }
+        
+    }
+
+
+
+
+
+   
+    
+}
