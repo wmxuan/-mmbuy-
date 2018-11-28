@@ -1,30 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- 引入MUI的CSS文件。提供MUI样式 -->
-    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
     <!-- 引入字体图标的CSS文件，提供字体图标 -->
     <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css">
-    <!-- 引入分类页的less文件 -->
-    <link rel="stylesheet/less" href="./less/detail.less">
+    <!-- 引入凑单品页的less文件 -->
+    <link rel="stylesheet/less" href="./less/gsproduct.less">
     <!-- 引入编译less文件的JS文件 -->
     <script src="./lib/less/less.js"></script>
     <!-- 引入rem的JS文件，要在前面引入因为他会影响到页面渲染 -->
     <script src="./js/rem.js"></script>
-    <title>Document</title>
+    <title>凑单品</title>
 </head>
+
 <body>
-    
+    <!-- 头部区域 -->
+    <header id="header">
+        <a href="index.html" class="fa fa-angle-left left"></a>
+        <h1>凑单品</h1>
+        <!-- <a href="javascript:;" class="logo"><img src="./images/header_logo.png" alt=""></a> -->
+        <a href="#" class="fa fa-download right"></a>
+    </header>
+    <div id="option">
+        <section id="choice">
+            <a href="javascript:;" data-url="api/getgsshop" class="shop">京东
+                <i class="fa fa-caret-down"></i>
+            </a>
+            <a href="javascript:;" data-url="api/getgsshoparea" class="area">华北
+                <i class="fa fa-caret-down"></i>
+            </a>
+            <a href="javascript:;" class="yuan">1元
+                <i class="fa fa-caret-down"></i>
+            </a>
+            <i class="fa fa-search"></i>
+        </section>
+        <ul class="shopul">
+        </ul>
+        <ul class="areaul">
+        </ul>
+        <ul class="yuanul">
+            <li>
+                <a href="javascript:;">一元
+                    <i class="fa fa-check"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- 主体区域 -->
+    <main id="main">
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <!--这里放置真实显示的DOM内容-->
+            </div>
+        </div>
+    </main>
+    <!-- 底部区域 -->
+    <!-- <footer id="footer">
+        <div class="top">
+            <a href="javascript:;">登录</a>
+            <a href="javascript:;">注册</a>
+            <a href="javascript:;"><i class="fa fa-arrow-up"></i>返回顶部</a>
+        </div>
+        <div class="bottom">
+            <p class="content"><span>手机APP下载</span>慢慢买手机版--掌上比价平台</p>
+            <p class="url">m.manmanbuy.com</p>
+        </div>
+    </footer> -->
+    <!-- 选择区域的模板 -->
+    <script id="choiceareaTpl" type="text/html">
+        {{each result value}}
+            <li><a href="javascript:;" data-areaid="{{value.areaId}}">{{value.areaName}}<i class="fa {{value.areaId==0?'fa-check':''}}"></i></a></li>
+        {{/each}}
+    </script>
+    <!-- 选择店铺的模板 -->
+    <script id="choiceshopTpl" type="text/html">
+        {{each result value}}
+            <li><a href="javascript:;" data-shopid="{{value.shopId}}">{{value.shopName}}<i class="fa {{value.shopId==0?'fa-check':''}}"></i></a></li>
+        {{/each}}
+        </script>
+    <!-- 页面主体内容模板 -->
+    <script id="commodityTpl" type="text/html">
+        {{each result value}}
+            <div class="commodity">
+                <a href=" http://item.m.jd.com/ware/view.action?wareId=1274360" class="content">
+                    <img src="{{value.productImg}}" alt="">
+                    <p class="des">{{value.productName}}</p>
+                    <p class="other"><span class="price">{{value.productPrice}}</span><button>去凑单</button></p>
+                </a>
+            </div>
+        {{/each}}
+    </script>
     <!-- 引入MUI的JS文件，提供MUI的JS插件 -->
     <script src="./lib/mui/js/mui.js"></script>
     <!-- 引入zepto的JS文件，操作元素发送请求，zepto相当于jQuery -->
     <script src="./lib/zepto/zepto.min.js"></script>
     <!-- 引入模板引擎文件，用于渲染模板 -->
     <script src="./lib/artTemplate/template-web.js"></script>
-    <!-- 引入分类页的JS文件 -->
-    <script src="./js/detail.js"></script>
+    <!-- 引入凑单品页的JS文件 -->
+    <script src="./js/gsproduct.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,142 @@
+html {
+  font-size: 100px;
+}
+body {
+  font-size: .14rem;
+  padding-top: .45rem;
+  background-color: white;
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  /* 移动端一般会设置盒模型为border-box 防止边框和padding撑大盒子超出屏幕宽度出现滚动条 */
+  box-sizing: border-box;
+  /*移动端a标签按住的高亮背景色 设置透明即可*/
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+li {
+  list-style: none;
+}
+input {
+  /* 去除输入框的内外边框 */
+  border: 0;
+  outline: 0;
+}
+img {
+  border: none;
+  vertical-align: middle;
+}
+a {
+  color: #666;
+  text-decoration: none;
+}
+html,
+body {
+  height: 100%;
+}
+#main {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+#header {
+  height: .45rem;
+  width: 100%;
+  background-color: #ff4e49;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+}
+#header .logo {
+  padding-left: .2rem;
+  line-height: .45rem;
+  height: 100%;
+  width: 58%;
+}
+#header .logo img {
+  width: 100%;
+}
+#header .left {
+  width: .45rem;
+  height: .45rem;
+  color: white;
+  font-size: .3rem;
+  text-align: center;
+  line-height: .45rem;
+}
+#header h1 {
+  margin: 0;
+  height: .45rem;
+  flex: 1;
+  font-size: .2rem;
+  line-height: .45rem;
+  text-align: center;
+  color: white;
+  font-weight: normal;
+}
+#header .right {
+  width: .45rem;
+  height: .45rem;
+  color: white;
+  font-size: .2rem;
+  text-align: center;
+  line-height: .45rem;
+}
+#search {
+  position: fixed;
+  top: .45rem;
+  left: 0;
+  height: .5rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 .1rem;
+}
+#search .search {
+  text-indent: 20px;
+  flex: 1;
+  height: .3rem;
+  background-color: #f1f1f1;
+  border-radius: .15rem;
+}
+#search .btn-search {
+  margin-left: 20px;
+  width: .6rem;
+  height: .3rem;
+  border-radius: .15rem;
+  background-color: #565656;
+  color: white;
+}
+#footer {
+  width: 100%;
+  height: 1.2rem;
+  background-color: #565656;
+}
+#footer .top {
+  display: flex;
+  border-bottom: 1px solid #727272;
+}
+#footer .top a {
+  width: 33.33%;
+  height: .3rem;
+  line-height: .3rem;
+  text-align: center;
+  color: white;
+  border-right: 1px solid #727272;
+}
+#footer .bottom {
+  padding-top: .2rem;
+  font-size: .12rem;
+}
+#footer .bottom .content {
+  text-align: center;
+}
+#footer .bottom .content span {
+  color: red;
+}
+#footer .bottom .url {
+  text-align: center;
+}
