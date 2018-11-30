@@ -76,6 +76,11 @@ $(function () {
              })
           }  
     }
+    mui(document).on('tap', 'a', function () {
+        var a = document.createElement('a');
+        a = this.cloneNode(true);
+        a.click();
+    })
     var mmbuy = new Mmbuy();
     mmbuy.choice();
     mmbuy.sendajax("api/getgsshop");

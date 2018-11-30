@@ -1,5 +1,8 @@
 $(function () {
     DomeWebController.init();
+    $(".qr").on("click",function () { 
+        $(".rule").html('<img src="./static/img/qr.png" alt="" class="qrpic">');
+     })
 });
 
 
@@ -34,7 +37,7 @@ DomeWebController = {
     buildScratchMod:function(){
         var that = DomeWebController;
 
-        var num = Math.ceil(Math.random() * 5);
+        var num = Math.ceil(Math.random() * 7);
         var $canvas = $(
             ScratchMod({
                 'container': that.getEle('$scratchModContainer'),//目标容器

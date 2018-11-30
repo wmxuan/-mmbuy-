@@ -100,3 +100,40 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 #scratch_mod_container canvas{
     background-size: 40%!important;
 }
+.right {
+  width: 300px;
+  height: 200px;
+  background-color: #f41037;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 999;
+}
+
+.container-fluid {
+  padding: 0 !important;
+}
+.rule {
+  width: 102%;
+  height: 500px;
+  background-color: #fe525e;
+  position: absolute;
+  left: 0;
+  bottom: 325px;
+  z-index: 999;
+}
+.qr {
+  width: 450px;
+  height: 150px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 120px;
+  z-index: 999;
+}
+.qrpic {
+  width: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
