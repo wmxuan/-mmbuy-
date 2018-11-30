@@ -1,0 +1,41 @@
+@import "base.less";
+
+#main {
+  padding-top: .2rem;
+  height: auto;
+  .product-list {
+    ul {
+      li {
+        height: 1.27rem;
+        padding: 0 .15rem;
+        a {
+          .product-img {
+            width: 1.27rem;
+            height: 1.27rem;
+            text-align: center;
+            img {
+              width: .85rem;
+            }
+          }
+          .product-info {
+            .product-title {
+              min-height: 0.6rem;
+              font-size: .15rem;
+              color: #000;
+              .product-price {
+                color: #ff6c00;
+              }
+            }
+            .product-shop {
+              font-size: .12rem;
+              padding-top: .08rem;
+              display: flex;
+              justify-content: space-between;
+              color: #a1a1a1;
+            }
+          }
+        }
+      }
+    }
+  }
+}

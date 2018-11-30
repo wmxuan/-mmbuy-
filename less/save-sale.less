@@ -1,0 +1,116 @@
+@import "base.less";
+
+
+
+#main {
+  width: 100%;
+  padding: .2rem;
+  height: auto;
+  .product-title {
+    span {
+      font-size: .15rem;
+      font-weight: bold;
+      color: #000;
+    }
+  }
+  .shop-info {
+    padding-bottom: .1rem;
+    margin-top: .1rem;
+    span {
+      font-size: .12rem;
+      color: #999;
+    }
+  }
+  .product-info {
+    text-align: center;
+    img {
+      height: 1.2rem;
+      width: 1.2rem;
+    }
+    .content {
+      font-size: .16rem;
+      color: #606060;
+    }
+    .big-pic {
+      padding-bottom: .1rem;
+      img {
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+
+    }
+    .place-info {
+      width: 1.5rem;
+      margin: 0 auto .1rem;
+      padding: .2rem .1rem;
+      box-shadow: 0 0 2px 3px rgba(0, 0, 0, .1);
+      li {
+        border-bottom: 1px dashed #ccc;
+        > a {
+          display: flex;
+          justify-content: space-between;
+          .if-buy {
+            color: #f27b04;
+          }
+        }
+      }
+    }
+    button {
+      width: 100%;
+    }
+    .erweima {
+      width: 100%;
+      margin-top: .10rem;
+    }
+  }
+
+  .comment {
+    margin-top: .2rem;
+
+    .title {
+      p {
+        font-size: .16rem;
+        color: #000;
+
+      }
+    }
+    .comment-area {
+      margin-bottom: .35rem;
+      .textarea {
+        width: 100%;
+        height: .8rem;
+      }
+    }
+  }
+  .new-comment {
+    .title {
+      font-size: .16rem;
+      color: #000;
+    }
+    ul {
+      li {
+        border-bottom: 1px solid #ccc;
+        padding: .1rem;
+        img {
+          width: .4rem;
+          height: .4rem;
+          margin-right: .05rem;
+          border-radius: 50%;
+        }
+        a {
+          color: #5997c0;
+        }
+      }
+      .info-area {
+        display: flex;
+        justify-content: space-between;
+        .time {
+          color: #666;
+        }
+      }
+      .mui-ellipsis {
+        color: #606060;
+      }
+    }
+  }
+}

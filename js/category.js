@@ -70,7 +70,7 @@ Manmanbuy.prototype.goProductList = function(){
         console.log(categoryId);
 
         //跳转到商品列表页面
-        location = that.baseURL+"/productList.html?categoryid="+categoryId;
+        location = "productList.html?categoryid="+categoryId;
     });
 }
 

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>moneyctrl</title>
+    <link rel="stylesheet" href="lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.css">
+    <link rel="stylesheet/less" href="less/save-sale.less">
+    <script src="lib/less/less.js"></script>
+    <script type="text/javascript" src="js/rem.js"></script>
+</head>
+
+<body>
+<!--头部-->
+<header id="header">
+    <a href="javascript:history.back();" class="fa fa-angle-left left"></a>
+    <h1>省钱控-最新优惠</h1>
+    <a href="#" class="fa fa-download right"></a>
+</header>
+
+<!-- 主体部分 -->
+<main id="main">
+    <div class="product-title">
+        <span>周黑鸭 锁鲜气调盒装套餐</span><span>（卤鸭脖200g+鸭锁骨240g）</span>
+    </div>
+    <div class="shop-info">
+        <span class="shop-name">天猫旗舰店</span>
+        <span class="time">10-25 13:26</span>
+        <span calss="writer">zzr/慢慢买</span>
+    </div>
+    <div class="product-info">
+        <img class="mui-media-object mui-pull-right" src="images/iphone.jpg">
+        <div class="mui-media-body">
+            <p class='content'> 周黑鸭知名的卤制品休闲食品，它皮黑肉嫩、醇厚不腻、香鲜美味，具有香、辣、麻、酥、嫩的特点，而且肉质精到、鲜嫩诱人，不仅闻的香，看了更让人欲罢不能。今日推荐的这款是周黑鸭
+                锁鲜气调盒装套餐，包含卤鸭脖200g+鸭锁骨240g。周黑鸭知名的卤制品休闲食品，它皮黑肉嫩、醇厚不腻、香鲜美味，具有香、辣、麻、酥、嫩的特点，而且肉质精到、鲜嫩诱人，不仅闻的香，看了更让人欲罢不能。今日推荐的这款是周黑鸭
+                锁鲜气调盒装套餐，包含卤鸭脖200g+鸭锁骨240g。</p>
+        </div>
+        <img class="big-pic" src="images/iphone.jpg" alt="">
+        <ul class="place-info">
+            <li>
+                <a href="#">
+                    <span class="place">北京</span>
+                    <span class="if-buy">有货</span>
+                </a>
+            </li>
+        </ul>
+        <button type="button" class="mui-btn mui-btn-warning go-buy">前往购买</button>
+        <img class="erweima" src="images/mmbweixin2.png" alt="">
+    </div>
+
+    <div class="comment">
+        <div class="title"><p>发表评论</p></div>
+        <div class="comment-area">
+            <textarea class="textarea">
+            </textarea>
+            <div>
+                <button type="button" class="mui-btn mui-btn-warning mui-pull-right">发表评论</button>
+            </div>
+        </div>
+        <div class="new-comment">
+            <div class="title">最新评论</div>
+            <ul>
+                <li class=" mui-media">
+                    <img class="mui-media-object mui-pull-left" src="images/iphone.jpg">
+                    <div class="info-area">
+                        <a href="" class="user-name">幸福</a>
+                        <div class="time">
+                            2016/10/25 14:18:45
+                        </div>
+
+                    </div>
+                    <p class='mui-ellipsis'>能和心爱的人一起睡觉，是件幸福的事情</p>
+                </li>
+                <li class=" mui-media">
+                    <img class="mui-media-object mui-pull-left" src="images/iphone.jpg">
+                    <div class="info-area">
+                        <a href="" class="user-name">幸福</a>
+                        <div class="time">
+                            2016/10/25 14:18:45
+                        </div>
+
+                    </div>
+                    <p class='mui-ellipsis'>能和心爱的人一起睡觉，是件幸福的事情</p>
+
+                </li>
+                <li class=" mui-media">
+                    <img class="mui-media-object mui-pull-left" src="images/iphone.jpg">
+                    <div class="info-area">
+                        <a href="" class="user-name">幸福</a>
+                        <div class="time">
+                            2016/10/25 14:18:45
+                        </div>
+
+                    </div>
+                    <p class='mui-ellipsis'>能和心爱的人一起睡觉，是件幸福的事情</p>
+
+                </li>
+                <li class=" mui-media">
+                    <img class="mui-media-object mui-pull-left" src="images/iphone.jpg">
+                    <div class="info-area">
+                        <a href="" class="user-name">幸福</a>
+                        <div class="time">
+                            2016/10/25 14:18:45
+                        </div>
+
+                    </div>
+                    <p class='mui-ellipsis'>能和心爱的人一起睡觉，是件幸福的事情</p>
+
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</main>
+
+<!-- 底部区域 -->
+<footer id="footer">
+    <div class="top">
+        <a href="login.html">登录</a>
+        <a href="register.html">注册</a>
+        <a href="javascript:;" class="go-top-btn"><i class="fa fa-arrow-up"></i>返回顶部</a>
+    </div>
+    <div class="bottom">
+        <p class="content"><span>手机APP下载</span>慢慢买手机版--掌上比价平台</p>
+        <p class="url">m.manmanbuy.com</p>
+    </div>
+</footer>
+
+<!--商品信息渲染-->
+<script id="productInfoTpl" type="text/html">
+    {{each result value}}
+    <div class="product-title">
+        <span>{{value.productName}}</span><span>{{value.productPinkage}}</span>
+    </div>
+    <div class="shop-info">
+        <span class="shop-name">{{value.productFrom}}</span>
+        <span class="time">{{value.productTime}}</span>
+        <span calss="writer">zzr/慢慢买</span>
+    </div>
+    <div class="product-info">
+        <div class="mui-media-object mui-pull-right">
+            {{@value.productImgSm}}
+        </div>
+
+        <div class="mui-media-body">
+            <p class='content'>{{value.productInfo}}{{value.productInfo1}}{{value.productInfo2}}</p>
+        </div>
+        <div class="big-pic">
+            {{@value.productImgSm}}
+        </div>
+        <!--<ul class="place-info">-->
+        <!--<li>-->
+        <!--<a href="#">-->
+        <!--{{@value.productCity}}-->
+        <!--&lt;!&ndash;<span class="place">{{value.productCity}}</span>&ndash;&gt;-->
+        <!--<span class="if-buy">有货</span>-->
+        <!--</a>-->
+        <!--</li>-->
+        <!--</ul>-->
+        <button type="button" class="mui-btn mui-btn-warning">前往购买</button>
+
+        <img class="erweima" src="images/mmbweixin2.png" alt="">
+    </div>
+
+    <div class="comment">
+        <div class="title"><p>发表评论</p></div>
+        <div class="comment-area">
+            <textarea class="textarea">
+            </textarea>
+            <div>
+                <button type="button" class="mui-btn mui-btn-warning mui-pull-right">发表评论</button>
+            </div>
+        </div>
+        <div class="new-comment">
+            <div class="title">最新评论</div>
+            <ul>
+                <li class=" mui-media">
+                    <img class="mui-media-object mui-pull-left" src="images/iphone.jpg">
+                    <div class="info-area">
+                        <a href="" class="user-name">幸福</a>
+                        <div class="time">
+                            2016/10/25 14:18:45
+                        </div>
+
+                    </div>
+                    <p class='mui-ellipsis'>能和心爱的人一起睡觉，是件幸福的事情</p>
+                </li>
+                <li class=" mui-media">
+                    <img class="mui-media-object mui-pull-left" src="images/iphone.jpg">
+                    <div class="info-area">
+                        <a href="" class="user-name">幸福</a>
+                        <div class="time">
+                            2016/10/25 14:18:45
+                        </div>
+                    </div>
+                    <p class='mui-ellipsis'>能和心爱的人一起睡觉，是件幸福的事情</p>
+                </li>
+                <li class=" mui-media">
+                    <img class="mui-media-object mui-pull-left" src="images/iphone.jpg">
+                    <div class="info-area">
+                        <a href="" class="user-name">幸福</a>
+                        <div class="time">
+                            2016/10/25 14:18:45
+                        </div>
+                    </div>
+                    <p class='mui-ellipsis'>能和心爱的人一起睡觉，是件幸福的事情</p>
+                </li>
+                <li class=" mui-media">
+                    <img class="mui-media-object mui-pull-left" src="images/iphone.jpg">
+                    <div class="info-area">
+                        <a href="" class="user-name">幸福</a>
+                        <div class="time">
+                            2016/10/25 14:18:45
+                        </div>
+
+                    </div>
+                    <p class='mui-ellipsis'>能和心爱的人一起睡觉，是件幸福的事情</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    {{/each}}
+</script>
+
+<script src="lib/mui/js/mui.js"></script>
+<script src="lib/zepto/zepto.min.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<script src="js/save-sale.js"></script>
+</body>
+</html>

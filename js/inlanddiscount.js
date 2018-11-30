@@ -85,16 +85,16 @@ Mmbuy.prototype={
         if (curScroll > 0) {
             setInterval(timer, 1);
         }
-        console.log(curScroll);
+        // console.log(curScroll);
         function timer() {
             if (curScroll > 0) {
                 curScroll = curScroll - speed;
                 $(elem).scrollTop(curScroll);
-                console.log(curScroll);
+                // console.log(curScroll);
                 if (curScroll <= 0) {
                     $(elem).scrollTop(0);
                     clearInterval(timer);
-                    console.log("清除计时器")
+                    // console.log("清除计时器")
                 }
             }
         }
